@@ -10,6 +10,8 @@
 #include"font.h"
 #include "texture.h"
 #include"choose.h"
+#include <fstream>
+using namespace std;
 GameStates doMenu(MainWindow& win,int &vol,int &volt) {
     SDL_Event e;
     Music mus {MUSIC_THEME_PATH};
@@ -102,12 +104,18 @@ GameStates doIntro(MainWindow& win,int fl) {
     }
 }
 
-GameStates doLost(MainWindow& win,int score,int &vol,int &volt) {
+GameStates doLost(MainWindow& win,int score,int &vol,int &volt,int &point) {
     SDL_Event e;
+    if(point<score){point=score;}
+    ofstream outfile;
+    outfile.open("score.txt");
+    outfile << point << endl;
+   // dong file da mo.
+    outfile.close();
     Music mus {MUSIC_THEME_PATH};
     int x, y;
     while (true) {
-        Lost lost(win,score,vol,volt);
+        Lost lost(win,score,vol,volt,point);
         lost.render();
         if (SDL_PollEvent(&e)) {
             if (e.type == SDL_QUIT) {
@@ -139,7 +147,7 @@ GameStates doLost(MainWindow& win,int score,int &vol,int &volt) {
     }
 }
 
-GameStates doLevel(MainWindow& win,int &vol,int fl,int &volt) {
+GameStates doLevel(MainWindow& win,int &vol,int fl,int &volt,int&point) {
     Level level(win,fl,volt);
 
     while (level.next_state == GameStates::Null) {
@@ -148,7 +156,7 @@ GameStates doLevel(MainWindow& win,int &vol,int fl,int &volt) {
         level.render();
     }
     if (level.next_state == GameStates::Lost) {
-        return doLost(win,level.score,vol,volt);
+        return doLost(win,level.score,vol,volt,point);
     }
     return GameStates::Intro;
 }
@@ -163,6 +171,11 @@ int main(int argc, char *argv[])
     int vol=1;
     int fl=1;
     int volt=1;
+    int point;
+    ifstream infile;
+    infile.open("score.txt");
+    infile>>point;
+    infile.close();
     GameStates current_state = GameStates::Menu;
 
     while (current_state != GameStates::Quit) {
@@ -171,7 +184,7 @@ int main(int argc, char *argv[])
             case GameStates::Menu: current_state = doMenu(win,vol,volt); break;
             case GameStates::Choose: current_state = doChoose(win,vol,fl,volt); break;
             case GameStates::Intro: current_state = doIntro(win,fl); break;
-            case GameStates::Level: current_state = doLevel(win,vol,fl,volt); break;
+            case GameStates::Level: current_state = doLevel(win,vol,fl,volt,point); break;
             default: return -1; // unexpected
         }
     }

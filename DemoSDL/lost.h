@@ -12,16 +12,18 @@ class Lost {
     const int score;
     const int vol;
     const int volt;
+    const int point;
     Background background;
     Background bang;
     Background play;
     Texture t;
+    Texture p;
     Texture cup;
     Texture v;
     Texture vt;
     Texture tomenu;
 public:
-    Lost(const MainWindow&,const int score,const int vol,const int volt);
+    Lost(const MainWindow&,const int score,const int vol,const int volt,const int point);
     Lost(const Lost&) = delete;
     Lost& operator=(const Lost&) = delete;
     void logic();
