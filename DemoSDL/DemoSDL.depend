@@ -1,0 +1,164 @@
+# depslib dependency file v1.0
+1715214647 source:c:\users\admin\desktop\demosdl\main.cpp
+	"mainwindow.h"
+	"defs.h"
+	"intro.h"
+	"level.h"
+	"music.h"
+	"menu.h"
+	"lost.h"
+	<SDL.h>
+	<memory>
+	"font.h"
+	"texture.h"
+	"choose.h"
+
+1713843021 c:\users\admin\desktop\demosdl\graphics.h
+	<SDL.h>
+	<SDL_image.h>
+	<SDL_ttf.h>
+	"defs.h"
+
+1715219081 c:\users\admin\desktop\demosdl\defs.h
+
+1714797887 source:c:\users\admin\desktop\demosdl\background.cpp
+	"background.h"
+
+1714798010 c:\users\admin\desktop\demosdl\background.h
+	"texture.h"
+	<string>
+	<SDL.h>
+
+1714031563 c:\users\admin\desktop\demosdl\texture.h
+	<SDL.h>
+	<string>
+
+1714031562 source:c:\users\admin\desktop\demosdl\exception.cpp
+	"exception.h"
+	<SDL.h>
+
+1714031563 c:\users\admin\desktop\demosdl\exception.h
+	<string>
+
+1714031563 source:c:\users\admin\desktop\demosdl\mainwindow.cpp
+	"mainwindow.h"
+	"exception.h"
+	<SDL_image.h>
+	<SDL_ttf.h>
+	<SDL_mixer.h>
+	<iostream>
+	<algorithm>
+
+1714031563 c:\users\admin\desktop\demosdl\mainwindow.h
+	<string>
+	<SDL.h>
+
+1714031562 source:c:\users\admin\desktop\demosdl\music.cpp
+	"music.h"
+	"exception.h"
+
+1714031563 c:\users\admin\desktop\demosdl\music.h
+	<SDL_mixer.h>
+	<string>
+
+1715216276 source:c:\users\admin\desktop\demosdl\pipe.cpp
+	"pipe.h"
+
+1715216276 c:\users\admin\desktop\demosdl\pipe.h
+	"texture.h"
+	<utility>
+	<SDL.h>
+
+1715174626 source:c:\users\admin\desktop\demosdl\player.cpp
+	"player.h"
+	"defs.h"
+	"SDL.h"
+
+1715078242 c:\users\admin\desktop\demosdl\player.h
+	"texture.h"
+
+1714031563 source:c:\users\admin\desktop\demosdl\font.cpp
+	"font.h"
+	"exception.h"
+
+1714031772 c:\users\admin\desktop\demosdl\font.h
+	<SDL_ttf.h>
+	<string>
+
+1715077386 source:c:\users\admin\desktop\demosdl\intro.cpp
+	"intro.h"
+	"mainwindow.h"
+	"defs.h"
+
+1715077365 c:\users\admin\desktop\demosdl\intro.h
+	"defs.h"
+	"texture.h"
+	"background.h"
+	"font.h"
+	"mainwindow.h"
+
+1715219840 source:c:\users\admin\desktop\demosdl\level.cpp
+	"level.h"
+	"mainwindow.h"
+	"defs.h"
+	<cmath>
+	<string>
+
+1715151632 c:\users\admin\desktop\demosdl\level.h
+	"defs.h"
+	"background.h"
+	"player.h"
+	"music.h"
+	"pipe.h"
+	"texture.h"
+	"font.h"
+	<array>
+	<random>
+
+1714031562 source:c:\users\admin\desktop\demosdl\texture.cpp
+	"texture.h"
+	"font.h"
+	"mainwindow.h"
+	"exception.h"
+	<SDL_image.h>
+	<SDL_ttf.h>
+
+1715146453 source:c:\users\admin\desktop\demosdl\menu.cpp
+	"menu.h"
+	"mainwindow.h"
+	"defs.h"
+	"background.h"
+
+1715146395 c:\users\admin\desktop\demosdl\menu.h
+	"defs.h"
+	"texture.h"
+	"font.h"
+	"mainwindow.h"
+	"background.h"
+
+1715214494 source:c:\users\admin\desktop\demosdl\lost.cpp
+	"lost.h"
+	"mainwindow.h"
+	"defs.h"
+
+1715214353 c:\users\admin\desktop\demosdl\lost.h
+	"defs.h"
+	"texture.h"
+	"background.h"
+	"font.h"
+	"mainwindow.h"
+	<string>
+
+1715150034 source:c:\users\admin\desktop\demosdl\choose.cpp
+	"menu.h"
+	"mainwindow.h"
+	"defs.h"
+	"choose.h"
+
+1715149827 c:\users\admin\desktop\demosdl\choose.h
+	"defs.h"
+	"texture.h"
+	"font.h"
+	"mainwindow.h"
+	"background.h"
+
